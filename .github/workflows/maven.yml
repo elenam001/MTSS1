@@ -28,7 +28,7 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Change Directory
-      run: cd roman-number
+      run: cd /home/runner/work/MTSS1/roman-number
     - name: Build with Maven
       run: mvn package
 
