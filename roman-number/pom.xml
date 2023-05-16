@@ -52,7 +52,9 @@
                     <goal>report</goal>
                   </goals>
             </execution>
-            <!--<execution>     <!per testare se code-coverage > 85%>
+            <!--per testare se code-coverage > 85%-->
+            <!--
+            <execution>
               <id>check</id>
               <goals>
                 <goal>check</goal>
@@ -71,7 +73,8 @@
                   </rule>
                 </rules>
               </configuration>
-            </execution>-->
+            </execution>
+            -->
           </executions>
         </plugin>
     </plugins>

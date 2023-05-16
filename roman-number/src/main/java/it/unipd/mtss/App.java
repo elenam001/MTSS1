@@ -15,4 +15,8 @@ public class App
     {
         System.out.println( "Hello World!" );
     }
+
+    public int method() {
+        return 1;
+    }
 }
