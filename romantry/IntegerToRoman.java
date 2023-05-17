@@ -67,7 +67,7 @@ public class IntegerToRoman {
     }
 
     /**
-     * <p>Converte un numero da integer a numerazione romana 
+     * <p>Converte un numero da integer [1,3999] a numerazione romana  
      * @param number numero da convertire
      * @return number come Stringa in numerazione romana
     */
