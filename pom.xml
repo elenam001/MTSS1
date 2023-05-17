@@ -11,32 +11,80 @@
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.11</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+  <build>
+    <plugins>
+      <plugin>
+      <groupId>org.apache.maven.plugins</groupId>
+      <artifactId>maven-checkstyle-plugin</artifactId>
+      <version>3.1.2</version>
+      <configuration>
+        <failsOnError>true</failsOnError>
+        <configLocation>checkstyle.xml</configLocation>
+        <consoleOutput>true</consoleOutput>
+      </configuration>
+      <executions>
+        <execution>
+          <phase>verify</phase>
+          <goals>
+            <goal>checkstyle</goal>
+          </goals>
+        </execution>
+      </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.8.8</version>
+        <executions>
+          <execution>
+            <id>prepare-agent</id>
+                  <goals>
+                    <goal>prepare-agent</goal>
+                </goals>
+            </execution>
+            <execution>
+              <id>report</id>
+                  <goals>
+                    <goal>report</goal>
+                  </goals>
+            </execution>
+            <!--per testare se code-coverage > 85%-->
+            <!--
+            <execution>
+              <id>check</id>
+              <goals>
+                <goal>check</goal>
+              </goals>
+              <configuration>
+                <rules>
+                  <rule>
+                    <element>BUNDLE</element>
+                    <limits>
+                      <limit>
+                        <counter>COMPLEXITY</counter>
+                        <value>COVEREDRATIO</value>
+                        <minimum>0.86</minimum>
+                      </limit>
+                    </limits>
+                  </rule>
+                </rules>
+              </configuration>
+            </execution>
+            -->
+          </executions>
+        </plugin>
+        <plugin>
+          <groupId>org.eluder.coveralls</groupId>
+          <artifactId>coveralls-maven-plugin</artifactId>
+          <version>4.3.0</version>
+          <configuration>
+              <repoToken>-DrepoToken=3kyQyHU8qCtSOM5ctpr5yBlBEit2KEBGq</repoToken>
+          </configuration>
+      </plugin>
+    </plugins>
+  </build>
 </project>
-<plugin>
-    <groupId>org.eluder.coveralls</groupId>
-    <artifactId>coveralls-maven-plugin</artifactId>
-    <version>4.3.0</version>
-    <configuration>
-        <repoToken>yourcoverallsprojectrepositorytoken</repoToken>
-    </configuration>
-</plugin>
-
-<plugin>
-    <groupId>org.codehaus.mojo</groupId>
-    <artifactId>cobertura-maven-plugin</artifactId>
-    <version>2.7</version>
-    <configuration>
-        <format>xml</format>
-        <maxmem>256m</maxmem>
-        <!-- aggregated reports for multi-module projects -->
-        <aggregate>true</aggregate>
-    </configuration>
-</plugin>
-
--DrepoToken=3kyQyHU8qCtSOM5ctpr5yBlBEit2KEBGq
-
-mvn cobertura:cobertura coveralls:report
