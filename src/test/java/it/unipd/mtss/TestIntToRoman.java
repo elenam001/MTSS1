@@ -84,7 +84,7 @@ public class TestIntToRoman {
     */
     @Test
     public void testConversione() {
-        assertEquals("", IntegerToRoman.convert(0));
+        assertEquals("CCLVI", IntegerToRoman.convert(256));
     }
 }
 
