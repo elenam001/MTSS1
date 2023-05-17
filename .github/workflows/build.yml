@@ -4,6 +4,7 @@ on:
       - main 
       - dev
       - feature
+      - tests/
   pull_request:
     branches:
       - main 
