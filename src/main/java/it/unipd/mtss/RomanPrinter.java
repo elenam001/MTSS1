@@ -96,29 +96,29 @@ public class RomanPrinter {
             for(int k = 0; k < romanNumber.length(); k++) {
                 switch(romanNumber.charAt(k)) {
                     case 'I':
-                        s.concat(lettera_I[j]);
+                        s += lettera_I[j];
                         break;
                     case 'V':
-                        s.concat(lettera_V[j]);
+                        s += lettera_V[j];
                         break;
                     case 'X':
-                        s.concat(lettera_X[j]);
+                        s += lettera_X[j];
                         break;
                     case 'L':
-                        s.concat(lettera_L[j]);
+                        s += lettera_L[j];
                         break;
                     case 'C':
-                        s.concat(lettera_C[j]);
+                        s += lettera_C[j];
                         break;
                     case 'D':
-                        s.concat(lettera_D[j]);
+                        s += lettera_D[j];
                         break;
                     case 'M':
-                        s.concat(lettera_M[j]);
+                        s += lettera_M[j];
                         break;
                 }
             }   
-            s.concat("\n");
+            s += "\n";
         }
         return s;
     }
