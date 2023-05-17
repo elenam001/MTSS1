@@ -29,7 +29,7 @@ jobs:
       run: mvn --batch-mode --update-snapshots test jacoco:report
         
     - name: Coveralls Coverage Report Setup
-      run: sed -i.bak 's/yourcoverallsprojectrepositorytoken/${{ secrets.COVERALL_REPO_TOKEN }}/g' pom.xml
+      run: sed -i.bak 's/yourcoverallsprojectrepositorytoken/${{ secrets.COVERALLS_REPO_TOKEN }}/g' pom.xml
     
     - name: Coveralls Coverage Report Submission
       run: mvn coveralls:report
