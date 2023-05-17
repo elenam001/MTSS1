@@ -16,6 +16,12 @@ public class App
         System.out.println( "Hello World!" );
     }
 
+    /**
+     * <p> Random method to test javadoc
+     * @param none nessun parametro
+     * @return 1 per verificare assertEquals()
+     * @see --boh
+     */
     public int method() {
         return 1;
     }
