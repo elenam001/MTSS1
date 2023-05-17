@@ -78,10 +78,21 @@ public class IntegerToRoman {
     */
     public static String convert(int number) {
         String s = "";
-        if(number == 0) { System.out.println("0 non è convertibile in numerazione romana."); }
-        else if(number < 0) { System.out.println("Non e' possibile convertire un numero negativo."); }
-        else if(number > 3999) { System.out.println("Massimo numero convertibile: 3999."); }
+        if(number == 0) { 
+            throw new IllegalArgumentException("0 non è convertibile in numerazione romana.");
+            // System.out.println("0 non è convertibile in numerazione romana."); 
+        }
+        else if(number < 0) { 
+            throw new IllegalArgumentException("Non e' possibile convertire un numero negativo.");
+            // System.out.println("Non e' possibile convertire un numero negativo."); 
+        }
+        else if(number > 3999) { 
+            throw new IllegalArgumentException("Massimo numero convertibile: 3999.");
+            // System.out.println("Massimo numero convertibile: 3999."); 
+        }
         else {
+
+
             //scomporre numero
             scomponi(number);
             //associare ad ogni cifra la lettera corrispondente

@@ -22,17 +22,31 @@ public class TestIntToRoman {
     /**
      * Test per input n = 0
      */
-    // @Test
-    // public void testCasoInputZero() {
-    //     assertEquals( /* inserire exception */, IntegerToRoman.convert(0));
-    // }
+    @Test
+    public void testCasoInputZero() {
+        try {
+            assertEquals("", IntegerToRoman.convert(0));
+            fail( "Lanciata eccezione" );
+        } 
+        catch (Exception e) {
+            String expectedMessage = "0 non è convertibile in numerazione romana.";
+            assertEquals( expectedMessage, e.getMessage() );
+        } 
+    }
     /** 
      * test per n < 0
      */
-    // @Test
-    // public void testCasoInputNegativo() {
-    //     assertEquals( /* inserire exception */, IntegerToRoman.convert(-1));
-    // }
+    @Test
+    public void testCasoInputNegativo() {
+        try {
+        assertEquals("", IntegerToRoman.convert(-1));
+        fail( "Lanciata eccezione" );
+        } 
+        catch (Exception e) {
+            String expectedMessage = "Non e' possibile convertire un numero negativo.";
+            assertEquals( expectedMessage, e.getMessage() );
+        }
+    }
     /** 
      * test per input n = 3999 
     */
@@ -43,10 +57,17 @@ public class TestIntToRoman {
     /** 
      * test per n > 3999
     */
-    // @Test
-    // public void testCasoInputOltreIlMax() {
-    //     assertEquals( /* inserire exception */, IntegerToRoman.convert(4000));
-    // }
+    @Test
+    public void testCasoInputOltreIlMax() {
+        try {
+            assertEquals("", IntegerToRoman.convert(4000));
+            fail( "Lanciata eccezione" );
+        } 
+        catch (Exception e) {
+            String expectedMessage = "Massimo numero convertibile: 3999.";
+            assertEquals( expectedMessage, e.getMessage() );
+        }
+    }
 
     /*
      * Test singole lettere
