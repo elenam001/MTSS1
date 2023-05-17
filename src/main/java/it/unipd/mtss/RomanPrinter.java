@@ -86,10 +86,20 @@ public class RomanPrinter {
         " |_|  |_|"
     };
 
+    /**
+     * <p> Dato un intero num in input ne crea un ascii-art in numerazione romana
+     * @param num intero [1,3999] da convertire in numerazione romana
+     * @return stringa ascii-art
+     */
     public static String print(int num){
         return printAsciiArt(IntegerToRoman.convert(num));
     }
     
+    /**
+     * <p> Data in input una stringa di numerazione romana, ne produce una contenente l'ascii-art
+     * @param romanNumber numero in numerazione romana
+     * @return stringa in ascii-art di romanNumber
+     */
     private static String printAsciiArt(String romanNumber) {
         String s = "";
         for(int j = 0; j < 6; j++) {
