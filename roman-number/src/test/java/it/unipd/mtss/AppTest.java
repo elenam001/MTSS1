@@ -1,40 +1,32 @@
 package it.unipd.mtss;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+// import junit.framework.Test;
+// import junit.framework.TestCase;
+// import junit.framework.TestSuite;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-        super( testName );
-    }
-
-    /**
-     * @return the suite of tests being tested
-     */
-    public static Test suite()
-    {
-        return new TestSuite( AppTest.class );
-    }
+public class AppTest {
 
     /**
      * Rigourous Test :-)
      */
-    public void testApp()
-    {
+    @Test
+    public void testApp() {
         App app = new App();
         int ciao = app.method();
         assertEquals(ciao, 1);
     }
+
+    @Test
+    public void evaluatesExpression() {
+        App app = new App();
+        int sum = app.evaluate("1+2+3");
+        assertEquals(6, sum);
+    }
+  
 }
