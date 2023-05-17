@@ -20,6 +20,35 @@ public class TestIntToRoman {
     }
 
     /**
+     * Test per input n = 0
+     */
+    // @Test
+    // public void testCasoInputZero() {
+    //     assertEquals( /* inserire exception */, IntegerToRoman.convert(0));
+    // }
+    /** 
+     * test per n < 0
+     */
+    // @Test
+    // public void testCasoInputNegativo() {
+    //     assertEquals( /* inserire exception */, IntegerToRoman.convert(-1));
+    // }
+    /** 
+     * test per input n = 3999 
+    */
+    @Test
+    public void testCasoInputMax() {
+        assertEquals("MMMCMXCIX", IntegerToRoman.convert(3999));
+    }
+    /** 
+     * test per n > 3999
+    */
+    // @Test
+    // public void testCasoInputOltreIlMax() {
+    //     assertEquals( /* inserire exception */, IntegerToRoman.convert(4000));
+    // }
+
+    /*
      * Test singole lettere
     */
     @Test
