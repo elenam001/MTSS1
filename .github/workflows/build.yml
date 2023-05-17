@@ -38,6 +38,10 @@ jobs:
 
     - name: Add badges
       run: git add .github
+      
+    - name: Coveralls GitHub Action
+    uses: coverallsapp/github-action@v1
+
 
     - name: Coveralls
       run: mvn -B coveralls:report --define repoToken=${{ secrets.COVERALLS_REPO_TOKEN }}
