@@ -36,3 +36,5 @@
         <aggregate>true</aggregate>
     </configuration>
 </plugin>
+
+mvn cobertura:cobertura coveralls:report
