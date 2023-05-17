@@ -32,23 +32,23 @@ public class TestIntToRoman {
     }
     @Test
     public void testConvNumLett_X() {
-        assertEquals("X", IntegerToRoman.convNumLett(10, IntegerToRoman.DECINE));
+        assertEquals("X", IntegerToRoman.convNumLett(1, IntegerToRoman.DECINE));
     }
     @Test
     public void testConvNumLett_L() {
-        assertEquals("L", IntegerToRoman.convNumLett(50, IntegerToRoman.DECINE));
+        assertEquals("L", IntegerToRoman.convNumLett(5, IntegerToRoman.DECINE));
     }
     @Test
     public void testConvNumLett_C() {
-        assertEquals("C", IntegerToRoman.convNumLett(100, IntegerToRoman.CENTINAIA));
+        assertEquals("C", IntegerToRoman.convNumLett(1, IntegerToRoman.CENTINAIA));
     }
     @Test
     public void testConvNumLett_D() {
-        assertEquals("D", IntegerToRoman.convNumLett(500, IntegerToRoman.CENTINAIA));
+        assertEquals("D", IntegerToRoman.convNumLett(5, IntegerToRoman.CENTINAIA));
     }
     @Test
     public void testConvNumLett_M() {
-        assertEquals("M", IntegerToRoman.convNumLett(1000, IntegerToRoman.MIGLIAIA));
+        assertEquals("M", IntegerToRoman.convNumLett(1, IntegerToRoman.MIGLIAIA));
     }
 
     /**
