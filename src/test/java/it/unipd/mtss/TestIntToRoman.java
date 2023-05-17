@@ -24,7 +24,7 @@ public class TestIntToRoman {
     */
     @Test
     public void testConvNumLett_I() {
-        assertEquals('I', IntegerToRoman.convNumLett(1, IntegerToRoman.UNITA));
+        assertEquals("I", IntegerToRoman.convNumLett(1, IntegerToRoman.UNITA));
     }
     @Test
     public void testConvNumLett_V() {
