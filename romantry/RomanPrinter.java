@@ -6,7 +6,7 @@ public class RomanPrinter {
     /**
      * ASCII-ART per lettera I
      */
-    static String[] lettera_I = { 
+    private static String[] lettera_I = { 
         "  _____ ", 
         " |_   _|", 
         "   | |  ", 
@@ -17,7 +17,7 @@ public class RomanPrinter {
     /**
      * ASCII-ART per lettera V
      */
-    static String[] lettera_V = {
+    private static String[] lettera_V = {
         " __      __",
         " \\ \\    / /",
         "  \\ \\  / / ",
@@ -28,7 +28,7 @@ public class RomanPrinter {
     /**
      * ASCII-ART per lettera X
      */
-    static String[] lettera_X = {
+    private static String[] lettera_X = {
         " __   __",
         " \\ \\ / /",
         "  \\ V / ",
@@ -39,7 +39,7 @@ public class RomanPrinter {
     /**
      * ASCII-ART per lettera L
      */
-    static String[] lettera_L = {
+    private static String[] lettera_L = {
         "  _      ",
         " | |     ",
         " | |     ",
@@ -50,7 +50,7 @@ public class RomanPrinter {
     /**
      * ASCII-ART per lettera C
      */
-    static String[] lettera_C = {
+    private static String[] lettera_C = {
         "   _____ ",
         "  / ____|",
         " | |     ",
@@ -61,7 +61,7 @@ public class RomanPrinter {
     /**
      * ASCII-ART per lettera D
      */
-    static String[] lettera_D = {
+    private static String[] lettera_D = {
         "  _____  ",
         " |  __ \\ ",
         " | |  | |",
@@ -72,7 +72,7 @@ public class RomanPrinter {
     /**
      * ASCII-ART per lettera M
      */
-    static String[] lettera_M = {
+    private static String[] lettera_M = {
         "  __  __ ",
         " |  \\/  |",
         " | \\  / |",

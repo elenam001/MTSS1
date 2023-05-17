@@ -15,7 +15,7 @@ public class IntegerToRoman {
     /**
      * Alfabeto numerazione romana
      */
-    static char[] alfabeto = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
+    private static char[] alfabeto = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
 
     /**
      * array di interi per contenere le cifre del numero da convertire
