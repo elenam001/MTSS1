@@ -3,7 +3,10 @@
 import java.util.Scanner;
 
 public class RomanPrinter {
-    static String[] lett_i = { 
+    /**
+     * ASCII-ART per lettera I
+     */
+    static String[] lettera_I = { 
         "  _____ ", 
         " |_   _|", 
         "   | |  ", 
@@ -11,7 +14,10 @@ public class RomanPrinter {
         "  _| |_ ", 
         " |_____|" 
     };
-    static String[] lett_v = {
+    /**
+     * ASCII-ART per lettera V
+     */
+    static String[] lettera_V = {
         " __      __",
         " \\ \\    / /",
         "  \\ \\  / / ",
@@ -19,7 +25,10 @@ public class RomanPrinter {
         "    \\  /   ",
         "     \\/    "
     };
-    static String[] lett_x = {
+    /**
+     * ASCII-ART per lettera X
+     */
+    static String[] lettera_X = {
         " __   __",
         " \\ \\ / /",
         "  \\ V / ",
@@ -27,7 +36,10 @@ public class RomanPrinter {
         "  / . \\ ",
         " /_/ \\_\\"
     };
-    static String[] lett_l = {
+    /**
+     * ASCII-ART per lettera L
+     */
+    static String[] lettera_L = {
         "  _      ",
         " | |     ",
         " | |     ",
@@ -35,7 +47,10 @@ public class RomanPrinter {
         " | |____ ",
         " |______|"
     };
-    static String[] lett_c = {
+    /**
+     * ASCII-ART per lettera C
+     */
+    static String[] lettera_C = {
         "   _____ ",
         "  / ____|",
         " | |     ",
@@ -43,7 +58,10 @@ public class RomanPrinter {
         " | |____ ",
         "  \\_____|"
     };
-    static String[] lett_d = {
+    /**
+     * ASCII-ART per lettera D
+     */
+    static String[] lettera_D = {
         "  _____  ",
         " |  __ \\ ",
         " | |  | |",
@@ -51,7 +69,10 @@ public class RomanPrinter {
         " | |__| |",
         " |_____/ "
     };
-    static String[] lett_m = {
+    /**
+     * ASCII-ART per lettera M
+     */
+    static String[] lettera_M = {
         "  __  __ ",
         " |  \\/  |",
         " | \\  / |",
@@ -70,25 +91,25 @@ public class RomanPrinter {
             for(int k = 0; k < romanNumber.length(); k++) {
                 switch(romanNumber.charAt(k)) {
                     case 'I':
-                        System.out.print(lett_i[j]);
+                        System.out.print(lettera_I[j]);
                         break;
                     case 'V':
-                        System.out.print(lett_v[j]);
+                        System.out.print(lettera_V[j]);
                         break;
                     case 'X':
-                        System.out.print(lett_x[j]);
+                        System.out.print(lettera_X[j]);
                         break;
                     case 'L':
-                        System.out.print(lett_l[j]);
+                        System.out.print(lettera_L[j]);
                         break;
                     case 'C':
-                        System.out.print(lett_c[j]);
+                        System.out.print(lettera_C[j]);
                         break;
                     case 'D':
-                        System.out.print(lett_d[j]);
+                        System.out.print(lettera_D[j]);
                         break;
                     case 'M':
-                        System.out.print(lett_m[j]);
+                        System.out.print(lettera_M[j]);
                         break;
                 }
             }   

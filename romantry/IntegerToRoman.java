@@ -4,70 +4,24 @@ import java.util.Scanner;
 
 public class IntegerToRoman {
 
+    /**
+     * Variabili statiche per indicare la dimensione della cifra
+     */
     private static final int UNITA = 0;
     private static final int DECINE = 2;
     private static final int CENTINAIA = 4;
     private static final int MIGLIAIA = 6;
 
+    /**
+     * Alfabeto numerazione romana
+     */
     static char[] alfabeto = {'I', 'V', 'X', 'L', 'C', 'D', 'M'};
 
-    static String[] lett_i = { 
-        "  _____ ", 
-        " |_   _|", 
-        "   | |  ", 
-        "   | |  ", 
-        "  _| |_ ", 
-        " |_____|" 
-    };
-    static String[] lett_v = {
-        " __      __",
-        " \\ \\    / /",
-        "  \\ \\  / / ",
-        "   \\ \\/ /  ",
-        "    \\  /   ",
-        "     \\/    "
-    };
-    static String[] lett_x = {
-        " __   __",
-        " \\ \\ / /",
-        "  \\ V / ",
-        "   > <  ",
-        "  / . \\ ",
-        " /_/ \\_\\"
-    };
-    static String[] lett_l = {
-        "  _      ",
-        " | |     ",
-        " | |     ",
-        " | |     ",
-        " | |____ ",
-        " |______|"
-    };
-    static String[] lett_c = {
-        "   _____ ",
-        "  / ____|",
-        " | |     ",
-        " | |     ",
-        " | |____ ",
-        "  \\_____|"
-    };
-    static String[] lett_d = {
-        "  _____  ",
-        " |  __ \\ ",
-        " | |  | |",
-        " | |  | |",
-        " | |__| |",
-        " |_____/ "
-    };
-    static String[] lett_m = {
-        "  __  __ ",
-        " |  \\/  |",
-        " | \\  / |",
-        " | |\\/| |",
-        " | |  | |",
-        " |_|  |_|"
-    };
-
+    /**
+     * array di interi per contenere le cifre del numero da convertire
+     * [migliaia, centinaia, decine, unita]
+     * [   0,         1,        3,     4  ]
+     */
     private static int a[] = new int[4];
 
     /**
