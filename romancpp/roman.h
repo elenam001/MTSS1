@@ -13,22 +13,28 @@ using std::string;
 #define CENITNAIA 4
 #define MIGLIAIA 6
 
-// char alfabeto[7];
-
-// string lett_i[6];
-// string lett_v[6];
-// string lett_x[6];
-// string lett_l[6];
-// string lett_c[6];
-// string lett_d[6];
-// string lett_m[6];
-
+/*
+    Scompone numero in input (num) 
+    salvando ogni cifra all'interno di una cella dell'array
+*/
 void scomponi(int a[], int dim, int num);
 
+/*
+    Associa alla cifra e al valore (unita', decine, centinaia, migliaia)
+    la/e corrispettiva/e lettera/e della numerazione romana 
+*/
 string convNumLett(int n, int dim);
 
+/*
+    Converte un numero in input in una stringa nella numerazione romana
+    usando le funzioni scomponi(int[], int, int) e convNumLett(int, int)
+*/
 string converti(int n);
 
+/*
+    Stampa la stringa prodotta dalla funzione converti(int)
+    in ASCII-art
+*/
 void textToAscii(string text);
 
 #endif
