@@ -37,4 +37,6 @@
     </configuration>
 </plugin>
 
+-DrepoToken=3kyQyHU8qCtSOM5ctpr5yBlBEit2KEBGq
+
 mvn cobertura:cobertura coveralls:report
