@@ -12,48 +12,64 @@ public class TestRomanPrinter {
     */
     @Test
     public void test_I() {
-        assertEquals("  _____ \n |_   _|\n   | |  \n   | |  \n  _| |_ \n |_____|\n", RomanPrinter.print(1));
+        String i = "  _____ \n |_   _|\n   | |  \n   | |  \n  _| |_ \n |_____|\n";
+        assertEquals(i, RomanPrinter.print(1));
     }
     /** 
      * Test singola lettera V
     */
     @Test
     public void test_V() {
-        assertEquals(" __      __\n \\ \\    / /\n  \\ \\  / / \n   \\ \\/ /  \n    \\  /   \n     \\/    \n", RomanPrinter.print(5));
+        String v = " __      __\n \\ \\    / /\n  \\ \\  / / \n   \\ \\/ /  \n    \\  /   \n     \\/    \n";
+        assertEquals(v, RomanPrinter.print(5));
     }
     /** 
      * Test singola lettera X
     */
     @Test
     public void test_X() {
-        assertEquals(" __   __\n \\ \\ / /\n  \\ V / \n   > <  \n  / . \\ \n /_/ \\_\\\n", RomanPrinter.print(10));
+        String x = " __   __\n \\ \\ / /\n  \\ V / \n   > <  \n  / . \\ \n /_/ \\_\\\n";
+        assertEquals(x, RomanPrinter.print(10));
     }
     /** 
      * Test singola lettera L
     */
     @Test
     public void test_L() {
-        assertEquals("  _      \n | |     \n | |     \n | |     \n | |____ \n |______|\n", RomanPrinter.print(50));
+        String l = "  _      \n | |     \n | |     \n | |     \n | |____ \n |______|\n";
+        assertEquals(l, RomanPrinter.print(50));
     }
     /** 
      * Test singola lettera C
     */
     @Test
     public void test_C() {
-        assertEquals("   _____ \n  / ____|\n | |     \n | |     \n | |____ \n  \\_____|\n", RomanPrinter.print(100));
+        String c = "   _____ \n  / ____|\n | |     \n | |     \n | |____ \n  \\_____|\n";
+        assertEquals(c, RomanPrinter.print(100));
     }
     /** 
      * Test singola lettera D
     */
     @Test
     public void test_D() {
-        assertEquals("  _____  \n |  __ \\ \n | |  | |\n | |  | |\n | |__| |\n |_____/ \n", RomanPrinter.print(500));
+        String d = "  _____  \n |  __ \\ \n | |  | |\n | |  | |\n | |__| |\n |_____/ \n";
+        assertEquals(d, RomanPrinter.print(500));
     }
     /** 
      * Test singola lettera M
     */
     @Test
     public void test_M() {
-        assertEquals("  __  __ \n |  \\/  |\n | \\  / |\n | |\\/| |\n | |  | |\n |_|  |_|\n", RomanPrinter.print(1000));
+        String m = "  __  __ \n |  \\/  |\n | \\  / |\n | |\\/| |\n | |  | |\n |_|  |_|\n";
+        assertEquals(m, RomanPrinter.print(1000));
+    }
+
+    /**
+     * Test numero 256
+     */
+    @Test
+    public void test_Numero() {
+        String s = "   _____    _____   _       __      __  _____ \n  / ____|  / ____| | |      \\ \\    / / |_   _|\n | |      | |      | |       \\ \\  / /    | |  \n | |      | |      | |        \\ \\/ /     | |  \n | |____  | |____  | |____     \\  /     _| |_ \n  \\_____|  \\_____| |______|     \\/     |_____|\n";
+        assertEquals(s, RomanPrinter.print(256));
     }
 }
