@@ -3,17 +3,21 @@ on:
     branches:  
       - main 
       - dev
-      - feature
+      - feature/*
       - tests/*
   pull_request:
     branches:
       - main 
       - dev
-      - feature
+      - feature/*
+      - tests/*
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    defaults: 
+      run:
+        working-directory: roman_numbers
 
     steps:
     - uses: actions/checkout@v3
