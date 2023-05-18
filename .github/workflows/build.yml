@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults: 
       run:
-        working-directory: /roman-numbers
+        working-directory: ./roman-numbers
 
     steps:
     - uses: actions/checkout@v3
