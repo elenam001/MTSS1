@@ -5,7 +5,7 @@
 
 package it.unipd.mtss;
 
-// import java.util.Scanner;
+import java.util.Scanner;
 
 public class RomanPrinter {
     /**
@@ -92,7 +92,11 @@ public class RomanPrinter {
      * @return stringa ascii-art
      */
     public static String print(int num){
-        return printAsciiArt(IntegerToRoman.convert(num));
+        try {
+            return printAsciiArt(IntegerToRoman.convert(num));   
+        } catch (Exception e) {
+            throw e;
+        }
     }
     
     /**
@@ -133,12 +137,12 @@ public class RomanPrinter {
         return s;
     }
 
-    // public static void main(String[] args) {
-    //     String s = "";
-    //     Scanner tastiera = new Scanner(System.in);
-    //     System.out.println("Inserisci numerazione romana: ");
-    //     s = tastiera.nextLine();
-    //     tastiera.close();
-    //     printAsciiArt(s);
-    // }
+    public static void main(String[] args) {
+        int s = 0;
+        Scanner tastiera = new Scanner(System.in);
+        System.out.print("Inserire numero: ");
+        s = tastiera.nextInt();
+        tastiera.close();
+        print(s);
+    }
 }
